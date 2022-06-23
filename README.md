@@ -1,4 +1,4 @@
-<h1> <a href="https://kulakovskyi.github.io/BrightLights/" target="_blank">Стартовая</a> для сайта диджея займов Bright Lights</h1>
+<h1> <a href="https://kulakovskyi.github.io/BrightLights/" target="_blank">Стартовая страница</a> для сайта диджея займов Bright Lights</h1>
 <ul type="none">
   <li>⭐Проект собран с помощью GULP/WEBPACK</li>
   <li>⭐В работе использыван SCSS</li>
