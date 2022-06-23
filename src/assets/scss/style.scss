@@ -1,0 +1,46 @@
+@import "base/_mixins.scss";
+@import "base/_vars.scss";
+@import "base/nullstyle";
+@import "base/fonts";
+@import "base/wrapper";
+
+[class*="__container"] {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  background: #1c1b21;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+
+  @include breakpoint($mobile-bp) {
+    font-size: 30px;
+    line-height: 52px;
+  }
+}
+
+@import "blocks/header.scss";
+
+@import "blocks/single.scss";
+@import "blocks/lights.scss";
+@import "blocks/mtv.scss";
+@import "blocks/tracks.scss";
+@import "blocks/gallery.scss";
+@import "blocks/tickets.scss";
+
+@import "blocks/footer.scss";

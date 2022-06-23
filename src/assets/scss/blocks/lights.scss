@@ -1,0 +1,110 @@
+.lights {
+  padding: 180px 0 150px 0;
+
+  @include breakpoint($tablet-bp) {
+    padding: 60px 0 60px 0;
+  }
+}
+
+.lights__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  @include breakpoint($tablet-bp) {
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  @include breakpoint($mobile-bp) {
+    gap: 28px;
+  }
+}
+
+.lights__info {
+  .lights__title {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0 0 60px 0;
+
+    @include breakpoint($mobile-bp) {
+      margin: 0 0 28px 0;
+    }
+  }
+
+  .lights__text {
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.7;
+    max-width: 540px;
+    margin: 0 0 60px 0;
+
+    @include breakpoint($mobile-bp) {
+      margin: 0 0 28px 0;
+    }
+
+    p:first-child {
+      margin: 0 0 25px 0;
+    }
+  }
+}
+
+.lights__found__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include breakpoint($mobile-bp) {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .found__item {
+    padding: 0 0 0 50px;
+    position: relative;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      width: 30px;
+      height: 30px;
+      background: #7a66cc;
+      border-radius: 10px 0px;
+      animation-name: color;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+.lights__image {
+  img {
+    max-width: 100%;
+  }
+}
+
+@keyframes color {
+  0% {
+    background: #7a66cc;
+  }
+
+  50% {
+    background: #c966cc;
+  }
+
+  100% {
+    background: #7a66cc;
+  }
+}

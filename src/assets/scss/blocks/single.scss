@@ -1,0 +1,203 @@
+.single {
+  padding: 412px 0 0 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1c1b21 92.19%),
+    url(../../assets/images/single/single-bg.jpg) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($tablet-bp) {
+    padding: 294px 0 0 0;
+    background-position: -1000px 0;
+  }
+
+  @include breakpoint(688px) {
+    padding: 200px 0 0 0;
+  }
+
+  .single__title {
+    margin: 0 0 10px 0;
+  }
+
+  .single__name {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 150px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    margin: 0 0 50px 0;
+
+    @include breakpoint(688px) {
+      font-size: 60px;
+      line-height: 70px;
+    }
+  }
+
+  .single__music {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin: 0 0 130px 0;
+
+    @include breakpoint(688px) {
+      gap: 15px;
+      margin: 0 0 60px 0;
+    }
+
+    .music__button {
+      width: 18px;
+      height: 20px;
+      border-top: 9px solid transparent;
+      border-left: 17px solid white;
+      border-bottom: 9px solid transparent;
+      cursor: pointer;
+      transition: 0.3s ease;
+
+      &._pause {
+        width: 19px;
+        height: 20px;
+        border: none;
+        border-left: 5px solid white;
+        border-right: 5px solid white;
+      }
+    }
+
+    .music__progressbar {
+      width: 100%;
+      height: 2px;
+      background: white;
+      cursor: pointer;
+    }
+
+    .progressbar__done {
+      height: 2px;
+      background: #7a66cc;
+      width: 0.1%;
+      position: relative;
+
+      .progress-but {
+        position: absolute;
+        width: 2px;
+        height: 20px;
+        background: #7a66cc;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+
+  .music__time {
+    @extend %flex-center;
+    gap: 20px;
+    position: relative;
+    min-width: 109px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include breakpoint(371px) {
+      font-size: 15px;
+      line-height: 25px;
+      min-width: 90px;
+    }
+
+    .time__in {
+      position: absolute;
+      left: -5px;
+      top: 0;
+    }
+
+    .time__all {
+      position: absolute;
+      right: -5px;
+      top: 0;
+    }
+  }
+
+  .single__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    @include breakpoint(1102px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .single__item {
+      padding: 210px 0 0 0;
+      border-radius: 25px 0px;
+      min-width: 350px;
+
+      @include breakpoint(371px) {
+        min-width: 298px;
+        max-width: 298px;
+      }
+    }
+
+    .item__text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 20px;
+      background: #7a66cc96;
+      border-radius: 20px 0px;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -60px;
+        top: -100px;
+        width: 50px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.185);
+        box-shadow: 0px -5px 10px 0px rgba(255, 255, 255, 0.185);
+        transform: rotate(45deg);
+        animation-name: blick;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    .single__item__one {
+      background: url(../../assets/images/single/one.jpg) no-repeat;
+      background-size: cover;
+
+      span {
+        display: block;
+        max-width: 310px;
+      }
+    }
+
+    .single__item__two {
+      background: url(../../assets/images/single/two.jpg) no-repeat;
+      background-size: cover;
+
+      span {
+        display: block;
+      }
+    }
+
+    .single__item__three {
+      background: url(../../assets/images/single/three.jpg) no-repeat;
+      background-size: cover;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes blick {
+  0% {
+    left: -90px;
+  }
+
+  100% {
+    left: 500px;
+  }
+}

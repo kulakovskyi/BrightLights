@@ -1,0 +1,91 @@
+.mtv {
+  padding: 0 0 300px 0;
+
+  @include breakpoint($tablet-bp) {
+    padding: 0 0 120px 0;
+  }
+
+  @include breakpoint($mobile-bp) {
+    padding: 0 0 60px 0;
+  }
+}
+
+.mtv__info {
+  padding: 50px 510px 50px 80px;
+  border: 1px solid #ffffff;
+  border-radius: 30px 0px;
+  position: relative;
+  background: url(../../assets/images/mtv/kv.png) no-repeat;
+  background-size: 100px 100px;
+  background-position: 80px 50px;
+
+  @include breakpoint($tablet-bp) {
+    padding: 50px 410px 50px 80px;
+  }
+
+  @include breakpoint(902px) {
+    padding: 50px;
+    background-position: 50px 35px;
+  }
+
+  @include breakpoint($mobile-bp) {
+    padding: 25px;
+    background-position: 25px 20px;
+  }
+
+  .mtv__image {
+    position: absolute;
+    max-width: 100%;
+    right: 80px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @include breakpoint($tablet-bp) {
+      max-width: 35%;
+      right: 40px;
+    }
+
+    @include breakpoint(902px) {
+      position: relative;
+      max-width: 100%;
+      top: 0;
+      right: 0;
+      transform: translate(0, 0);
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .mtv__text {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0 0 25px 0;
+    padding: 0 0 25px 0;
+    border-bottom: 1px solid #ffffff83;
+
+    @include breakpoint($mobile-bp) {
+      font-size: 15px;
+    }
+  }
+
+  .mtv__link {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #7a66cc;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: #003c80;
+    }
+
+    @include breakpoint(902px) {
+      display: inline-block;
+      margin: 0 0 35px 0;
+    }
+
+    @include breakpoint($mobile-bp) {
+      font-size: 15px;
+    }
+  }
+}
